@@ -22,16 +22,25 @@ struct UserProfile: View {
     
     var body: some View {
         VStack {
-            Text("Personal Information")
+            
+            Text("Personal Information").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).fontWeight(.bold)
             Image("profile-image-placeholder")
-            Text(firstName ?? "")
-            Text(lastName ?? "")
-            Text(email ?? "")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(height: 300, alignment: .center)
+                .padding(EdgeInsets(top: 50, leading: 0, bottom: 20, trailing: 0))
+            
+            VStack(spacing: 10){
+                Text("\(firstName ?? "") \(lastName ?? "")")
+                Text(email ?? "")
+            }.fontWeight(.semibold)
+            
+            Spacer()
+
             Button(action: onPressLogout) {
                 Text("Logout")
-            }
-
-        }
+            }.buttonStyle(YellowButton()).padding()
+        }.padding()
     }
 }
 

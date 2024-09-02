@@ -13,9 +13,9 @@ let kEmail = "email key"
 let kIsLoggedIn = "kIsLoggedIn"
 
 struct Onboarding: View {
-    @State var firstName: String = "aa"
-    @State var lastName: String = "bb"
-    @State var email: String = "AA@bb.com"
+    @State var firstName: String = "Maria"
+    @State var lastName: String = "Callas"
+    @State var email: String = "mariacallas@gmail.com"
     
     @State var isLoggedIn: Bool = false
     
@@ -35,7 +35,7 @@ struct Onboarding: View {
         if (UserDefaults.standard.bool(forKey: kIsLoggedIn)) {
             isLoggedIn = true
         }
-
+        
     }
     
     var body: some View {
@@ -47,16 +47,51 @@ struct Onboarding: View {
                 ){
                     Text("")
                 }
-                TextField("First Name", text: $firstName)
-                TextField("Last Name", text: $lastName)
-                TextField("E-Mail", text: $email)
-                Button(action: onPressRegister) {
-                    Text("Register")
-                }
+                
+                
+                Image("full-logo").resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 300, alignment: .center)
+                                
+                VStack{
+                    VStack{
+                        TextField("First Name", text: $firstName)
+                            .frame(minHeight: 50)
+                            .padding(EdgeInsets(top: 0, leading: 6, bottom: 0, trailing: 6))
+                            .background(Colors.white)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 5)
+                                    .stroke(lineWidth: 1.0)
+                                    .fill(Colors.primaryOne)
+                            )
+                        TextField("Last Name", text: $lastName)
+                            .frame(minHeight: 50)
+                            .padding(EdgeInsets(top: 0, leading: 6, bottom: 0, trailing: 6))
+                            .background(Colors.white)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 5)
+                                    .stroke(lineWidth: 1.0)
+                                    .fill(Colors.primaryOne)
+                            )
+                        TextField("E-Mail", text: $email)
+                            .frame(minHeight: 50)
+                            .padding(EdgeInsets(top: 0, leading: 6, bottom: 0, trailing: 6))
+                            .background(Colors.white)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 5)
+                                    .stroke(lineWidth: 1.0)
+                                    .fill(Colors.primaryOne)
+                            )
+                    }.padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
+                    
+                    Button(action: onPressRegister) {
+                        Text("Register")
+                    }.buttonStyle(YellowButton())
+                }.padding()
             }.onAppear {
                 onAppearOnboarding()
             }
-
+            
         }
     }
 }

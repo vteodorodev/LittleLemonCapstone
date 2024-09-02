@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		BC33E1602C84B8BF00656721 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33E15F2C84B8BF00656721 /* UserProfile.swift */; };
+		BC33E1622C84E49400656721 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC33E1612C84E49400656721 /* Colors.xcassets */; };
+		BC33E1652C84E65100656721 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33E1642C84E65100656721 /* Colors.swift */; };
+		BC33E1682C84F57C00656721 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33E1672C84F57C00656721 /* ButtonStyle.swift */; };
+		BC33E16D2C84FB5300656721 /* SmallLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33E16C2C84FB5300656721 /* SmallLogo.swift */; };
+		BC33E16F2C85CFC300656721 /* FetchedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33E16E2C85CFC300656721 /* FetchedObjects.swift */; };
+		BC33E1722C85D06F00656721 /* MenuListStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33E1712C85D06F00656721 /* MenuListStruct.swift */; };
+		BC33E1742C85D07C00656721 /* MenuItemStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33E1732C85D07C00656721 /* MenuItemStruct.swift */; };
 		BC4F7D222C496E150022EA33 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4F7D212C496E150022EA33 /* Onboarding.swift */; };
 		BC4F7D242C4977F60022EA33 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4F7D232C4977F60022EA33 /* Home.swift */; };
 		BC4F7D262C4978350022EA33 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4F7D252C4978350022EA33 /* Menu.swift */; };
@@ -20,6 +27,13 @@
 
 /* Begin PBXFileReference section */
 		BC33E15F2C84B8BF00656721 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		BC33E1612C84E49400656721 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		BC33E1642C84E65100656721 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		BC33E1672C84F57C00656721 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		BC33E16C2C84FB5300656721 /* SmallLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallLogo.swift; sourceTree = "<group>"; };
+		BC33E16E2C85CFC300656721 /* FetchedObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedObjects.swift; sourceTree = "<group>"; };
+		BC33E1712C85D06F00656721 /* MenuListStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListStruct.swift; sourceTree = "<group>"; };
+		BC33E1732C85D07C00656721 /* MenuItemStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemStruct.swift; sourceTree = "<group>"; };
 		BC4F7D212C496E150022EA33 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		BC4F7D232C4977F60022EA33 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		BC4F7D252C4978350022EA33 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -42,6 +56,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC33E1632C84E62600656721 /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				BC33E1642C84E65100656721 /* Colors.swift */,
+			);
+			path = Globals;
+			sourceTree = "<group>";
+		};
+		BC33E1662C84F52D00656721 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				BC33E1672C84F57C00656721 /* ButtonStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		BC33E16B2C84FB3C00656721 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BC33E16C2C84FB5300656721 /* SmallLogo.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BC33E1702C85D04E00656721 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC33E1712C85D06F00656721 /* MenuListStruct.swift */,
+				BC33E1732C85D07C00656721 /* MenuItemStruct.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BC761C712C495925003FA54D = {
 			isa = PBXGroup;
 			children = (
@@ -61,15 +108,21 @@
 		BC761C7C2C495925003FA54D /* LittleLemonCapstone */ = {
 			isa = PBXGroup;
 			children = (
+				BC33E1702C85D04E00656721 /* Models */,
+				BC33E16B2C84FB3C00656721 /* Components */,
+				BC33E1662C84F52D00656721 /* Styles */,
+				BC33E1632C84E62600656721 /* Globals */,
 				BC761C7D2C495925003FA54D /* LittleLemonCapstoneApp.swift */,
 				BC33E15F2C84B8BF00656721 /* UserProfile.swift */,
 				BC761C812C495927003FA54D /* Assets.xcassets */,
+				BC33E1612C84E49400656721 /* Colors.xcassets */,
 				BC761C862C495927003FA54D /* Persistence.swift */,
 				BC761C882C495927003FA54D /* LittleLemonCapstone.xcdatamodeld */,
 				BC761C832C495927003FA54D /* Preview Content */,
 				BC4F7D212C496E150022EA33 /* Onboarding.swift */,
 				BC4F7D232C4977F60022EA33 /* Home.swift */,
 				BC4F7D252C4978350022EA33 /* Menu.swift */,
+				BC33E16E2C85CFC300656721 /* FetchedObjects.swift */,
 			);
 			path = LittleLemonCapstone;
 			sourceTree = "<group>";
@@ -140,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC33E1622C84E49400656721 /* Colors.xcassets in Resources */,
 				BC761C852C495927003FA54D /* Preview Assets.xcassets in Resources */,
 				BC761C822C495927003FA54D /* Assets.xcassets in Resources */,
 			);
@@ -153,11 +207,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC4F7D262C4978350022EA33 /* Menu.swift in Sources */,
+				BC33E1652C84E65100656721 /* Colors.swift in Sources */,
+				BC33E1682C84F57C00656721 /* ButtonStyle.swift in Sources */,
 				BC761C8A2C495927003FA54D /* LittleLemonCapstone.xcdatamodeld in Sources */,
 				BC33E1602C84B8BF00656721 /* UserProfile.swift in Sources */,
 				BC761C872C495927003FA54D /* Persistence.swift in Sources */,
+				BC33E1742C85D07C00656721 /* MenuItemStruct.swift in Sources */,
+				BC33E16D2C84FB5300656721 /* SmallLogo.swift in Sources */,
 				BC4F7D242C4977F60022EA33 /* Home.swift in Sources */,
 				BC4F7D222C496E150022EA33 /* Onboarding.swift in Sources */,
+				BC33E16F2C85CFC300656721 /* FetchedObjects.swift in Sources */,
+				BC33E1722C85D06F00656721 /* MenuListStruct.swift in Sources */,
 				BC761C7E2C495925003FA54D /* LittleLemonCapstoneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
