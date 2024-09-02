@@ -15,6 +15,10 @@
 		BC33E16F2C85CFC300656721 /* FetchedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33E16E2C85CFC300656721 /* FetchedObjects.swift */; };
 		BC33E1722C85D06F00656721 /* MenuListStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33E1712C85D06F00656721 /* MenuListStruct.swift */; };
 		BC33E1742C85D07C00656721 /* MenuItemStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33E1732C85D07C00656721 /* MenuItemStruct.swift */; };
+		BC33E1872C85EE8100656721 /* ExampleDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC33E1852C85EE8100656721 /* ExampleDatabase.xcdatamodeld */; };
+		BC33E1892C85EED400656721 /* Dish+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33E1882C85EED400656721 /* Dish+CoreDataProperties.swift */; };
+		BC33E18B2C85EF4300656721 /* Dish+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33E18A2C85EF4300656721 /* Dish+CoreDataClass.swift */; };
+		BC33E18E2C86023E00656721 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33E18D2C86023E00656721 /* MenuItemView.swift */; };
 		BC4F7D222C496E150022EA33 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4F7D212C496E150022EA33 /* Onboarding.swift */; };
 		BC4F7D242C4977F60022EA33 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4F7D232C4977F60022EA33 /* Home.swift */; };
 		BC4F7D262C4978350022EA33 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4F7D252C4978350022EA33 /* Menu.swift */; };
@@ -22,7 +26,6 @@
 		BC761C822C495927003FA54D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC761C812C495927003FA54D /* Assets.xcassets */; };
 		BC761C852C495927003FA54D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC761C842C495927003FA54D /* Preview Assets.xcassets */; };
 		BC761C872C495927003FA54D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC761C862C495927003FA54D /* Persistence.swift */; };
-		BC761C8A2C495927003FA54D /* LittleLemonCapstone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC761C882C495927003FA54D /* LittleLemonCapstone.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,10 @@
 		BC33E16E2C85CFC300656721 /* FetchedObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedObjects.swift; sourceTree = "<group>"; };
 		BC33E1712C85D06F00656721 /* MenuListStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListStruct.swift; sourceTree = "<group>"; };
 		BC33E1732C85D07C00656721 /* MenuItemStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemStruct.swift; sourceTree = "<group>"; };
+		BC33E1862C85EE8100656721 /* ExampleDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDatabase.xcdatamodel; sourceTree = "<group>"; };
+		BC33E1882C85EED400656721 /* Dish+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dish+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BC33E18A2C85EF4300656721 /* Dish+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dish+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BC33E18D2C86023E00656721 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		BC4F7D212C496E150022EA33 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		BC4F7D232C4977F60022EA33 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		BC4F7D252C4978350022EA33 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -42,7 +49,6 @@
 		BC761C812C495927003FA54D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC761C842C495927003FA54D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BC761C862C495927003FA54D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		BC761C892C495927003FA54D /* LittleLemonCapstone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LittleLemonCapstone.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				BC33E16C2C84FB5300656721 /* SmallLogo.swift */,
+				BC33E18D2C86023E00656721 /* MenuItemView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -87,6 +94,15 @@
 				BC33E1732C85D07C00656721 /* MenuItemStruct.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BC33E18C2C85FF1500656721 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BC33E1882C85EED400656721 /* Dish+CoreDataProperties.swift */,
+				BC33E18A2C85EF4300656721 /* Dish+CoreDataClass.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		BC761C712C495925003FA54D = {
@@ -108,6 +124,7 @@
 		BC761C7C2C495925003FA54D /* LittleLemonCapstone */ = {
 			isa = PBXGroup;
 			children = (
+				BC33E18C2C85FF1500656721 /* CoreData */,
 				BC33E1702C85D04E00656721 /* Models */,
 				BC33E16B2C84FB3C00656721 /* Components */,
 				BC33E1662C84F52D00656721 /* Styles */,
@@ -117,12 +134,12 @@
 				BC761C812C495927003FA54D /* Assets.xcassets */,
 				BC33E1612C84E49400656721 /* Colors.xcassets */,
 				BC761C862C495927003FA54D /* Persistence.swift */,
-				BC761C882C495927003FA54D /* LittleLemonCapstone.xcdatamodeld */,
 				BC761C832C495927003FA54D /* Preview Content */,
 				BC4F7D212C496E150022EA33 /* Onboarding.swift */,
 				BC4F7D232C4977F60022EA33 /* Home.swift */,
 				BC4F7D252C4978350022EA33 /* Menu.swift */,
 				BC33E16E2C85CFC300656721 /* FetchedObjects.swift */,
+				BC33E1852C85EE8100656721 /* ExampleDatabase.xcdatamodeld */,
 			);
 			path = LittleLemonCapstone;
 			sourceTree = "<group>";
@@ -209,7 +226,7 @@
 				BC4F7D262C4978350022EA33 /* Menu.swift in Sources */,
 				BC33E1652C84E65100656721 /* Colors.swift in Sources */,
 				BC33E1682C84F57C00656721 /* ButtonStyle.swift in Sources */,
-				BC761C8A2C495927003FA54D /* LittleLemonCapstone.xcdatamodeld in Sources */,
+				BC33E1892C85EED400656721 /* Dish+CoreDataProperties.swift in Sources */,
 				BC33E1602C84B8BF00656721 /* UserProfile.swift in Sources */,
 				BC761C872C495927003FA54D /* Persistence.swift in Sources */,
 				BC33E1742C85D07C00656721 /* MenuItemStruct.swift in Sources */,
@@ -218,7 +235,10 @@
 				BC4F7D222C496E150022EA33 /* Onboarding.swift in Sources */,
 				BC33E16F2C85CFC300656721 /* FetchedObjects.swift in Sources */,
 				BC33E1722C85D06F00656721 /* MenuListStruct.swift in Sources */,
+				BC33E18E2C86023E00656721 /* MenuItemView.swift in Sources */,
 				BC761C7E2C495925003FA54D /* LittleLemonCapstoneApp.swift in Sources */,
+				BC33E18B2C85EF4300656721 /* Dish+CoreDataClass.swift in Sources */,
+				BC33E1872C85EE8100656721 /* ExampleDatabase.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,13 +446,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BC761C882C495927003FA54D /* LittleLemonCapstone.xcdatamodeld */ = {
+		BC33E1852C85EE8100656721 /* ExampleDatabase.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BC761C892C495927003FA54D /* LittleLemonCapstone.xcdatamodel */,
+				BC33E1862C85EE8100656721 /* ExampleDatabase.xcdatamodel */,
 			);
-			currentVersion = BC761C892C495927003FA54D /* LittleLemonCapstone.xcdatamodel */;
-			path = LittleLemonCapstone.xcdatamodeld;
+			currentVersion = BC33E1862C85EE8100656721 /* ExampleDatabase.xcdatamodel */;
+			path = ExampleDatabase.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
