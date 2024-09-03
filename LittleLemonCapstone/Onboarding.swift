@@ -71,6 +71,7 @@ struct Onboarding: View {
                     }
                 }
                 .padding()
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                 .background(Colors.primaryOne)
                 
                                 
