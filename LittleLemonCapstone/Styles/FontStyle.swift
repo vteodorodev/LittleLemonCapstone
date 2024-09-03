@@ -19,5 +19,19 @@ extension Font {
     static var karlaLeadText: Font {
         Font.custom("Karla-Medium", size: 20)
     }
+    
+    static var karlaCardTitle: Font {
+        Font.custom("Karla-Bold", size: 20)
+    }
+    
+    static var karlaParagraph : Font {
+        Font.custom("Karla-Regular", size: 16)
+    }
+    
+    static var karlaHighlight : Font {
+        Font.custom("Karla-Medium", size: 16)
+    }
+
+    
 }
     

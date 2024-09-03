@@ -52,7 +52,7 @@ struct Menu: View {
                         dish.title = item.title
                         dish.price = item.price
                         dish.image = item.image
-                        
+                        dish.dishDescription = item.dishDescription
                     }
                     
                     try viewContext.save()
@@ -117,9 +117,9 @@ struct Menu: View {
                     List {
                         ForEach(dishes) {
                             dish in
-                            MenuItemView(title: dish.title, formattedPrice: dish.formatPrice(), image: dish.image)
+                            MenuItemView(title: dish.title, formattedPrice: dish.formatPrice(), image: dish.image, dishDescription: dish.dishDescription)
                         }
-                    }
+                    }.listStyle(.plain)
                 }
         }.onAppear {
             getMenuData()

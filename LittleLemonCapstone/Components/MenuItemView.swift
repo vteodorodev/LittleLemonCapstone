@@ -12,23 +12,39 @@ struct MenuItemView: View {
     let title: String
     let formattedPrice: String
     let image: String
+    let dishDescription: String
     
     var body: some View {
         
         VStack(alignment: .leading) {
-            HStack {
-                Text(title)
-                Spacer()
-                Text(formattedPrice)
-            }
-            
-            AsyncImage(url: URL(string: image)) { phase in
-                switch phase {
-                case .success(let image):
-                    image.resizable().frame(maxWidth: .infinity, maxHeight: 200)
-                default: ProgressView() // <-- here
+            Text(title).font(.karlaCardTitle)
+            HStack(spacing:0){
+                VStack (alignment: .leading, spacing: 0){
+                    Text(dishDescription)
+                        .lineLimit(4)
+                        .font(.karlaParagraph)
+                        .foregroundStyle(Colors.primaryOne)
+                    Spacer()
+                    Text(formattedPrice).font(.karlaHighlight).foregroundStyle(Colors.primaryOne)
+                    
+                }
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 100)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
+                
+                AsyncImage(url: URL(string: image)) { phase in
+                    switch phase {
+                    case .success(let image):
+                        image.resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 140, height: 140)
+                            .clipped()
+                    default: ProgressView().frame(width: 140, height: 140) // <-- here
+                    }
                 }
             }
+            
+            
+            
             
             
         }
@@ -49,5 +65,5 @@ struct MenuItemView: View {
 }
 
 #Preview {
-    MenuItemView(title: "Title", formattedPrice: "$0.99", image: "")
+    MenuItemView(title: "Greek Salad", formattedPrice: "$10", image: "https://github.com/Meta-Mobile-Developer-PC/Working-With-Data-API/blob/main/images/greekSalad.jpg?raw=true", dishDescription: "The famous greek salad of crispy lettuce, peppers, olives, our Chicago.")
 }

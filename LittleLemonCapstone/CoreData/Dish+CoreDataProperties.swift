@@ -20,6 +20,8 @@ extension Dish {
     @NSManaged public var price: String
     @NSManaged public var image: String
     @NSManaged public var id: Int64
+    @NSManaged public var dishDescription: String
+
 
 }
 
