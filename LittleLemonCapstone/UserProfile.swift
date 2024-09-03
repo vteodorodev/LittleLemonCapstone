@@ -21,26 +21,54 @@ struct UserProfile: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(alignment:.leading) {
             
-            Text("Personal Information").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).fontWeight(.bold)
-            Image("profile-image-placeholder")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 300, alignment: .center)
-                .padding(EdgeInsets(top: 50, leading: 0, bottom: 20, trailing: 0))
+            Text("Personal Information").font(.karlaCardTitle)
             
-            VStack(spacing: 10){
-                Text("\(firstName ?? "") \(phoneNumber ?? "")")
-                Text(email ?? "")
-            }.fontWeight(.semibold)
+            VStack(alignment: .leading, spacing: 15) {
+                
+                VStack(alignment: .leading, spacing: 5) {
+                    Text("Avatar").font(.karlaLabel).foregroundStyle(Color.primary1)
+                    Image("profile-image-placeholder")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxHeight: 80, alignment: .center)
+                        .background(.pink)
+                }
+                
+                VStack(alignment: .leading, spacing: 5) {
+                    Text("First Name").font(.karlaLabel).foregroundStyle(Color.primary1)
+                    Text("\(firstName ?? "")")
+                        .padding()
+                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                        .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.primary1, lineWidth:1))
+                }
+                
+                VStack(alignment: .leading, spacing: 5) {
+                    Text("Email").font(.karlaLabel).foregroundStyle(Color.primary1)
+                    Text("\(email ?? "")")
+                        .padding()
+                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                        .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.primary1, lineWidth:1))
+                }
+                
+                VStack(alignment: .leading, spacing: 5) {
+                    Text("Phone Number").font(.karlaLabel).foregroundStyle(Color.primary1)
+                    Text("\(phoneNumber ?? "")")
+                        .padding()
+                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                        .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.primary1, lineWidth:1))
+                }
+            }.padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
+            
             
             Spacer()
-
+            
             Button(action: onPressLogout) {
                 Text("Logout")
             }.buttonStyle(YellowButton()).padding()
-        }.padding()
+        }
+        .padding()
     }
 }
 

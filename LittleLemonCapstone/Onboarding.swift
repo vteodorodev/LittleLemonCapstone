@@ -74,51 +74,39 @@ struct Onboarding: View {
                 .background(Colors.primaryOne)
                 
                                 
-                VStack{
-                    VStack{
-                        HStack {
-                            Image(systemName: "person")
-                                .foregroundColor(.gray)
-                            TextField("Name", text: $firstName)
+                VStack(spacing: 30){
+                    VStack(spacing: 15){
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text("First Name*")
+                                .font(.karlaLabel)
+                                .foregroundStyle(Color.primary1)
+                            TextField("Name*", text: $firstName)
+                                .padding()
+                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                                .overlay(RoundedRectangle(cornerRadius: 5)
+                                .stroke(Color.primary1, lineWidth:1))
                         }
-                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
-                        .background(Colors.white)
-                        .clipShape(
-                            RoundedRectangle(
-                                cornerRadius: 5,
-                                style: .continuous
-                            )
-                        )
 
-                        HStack {
-                            Image(systemName: "at")
-                                .foregroundColor(.gray)
-                            TextField("Email", text: $email)
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text("Email*")
+                                .font(.karlaLabel)
+                                .foregroundStyle(Color.primary1)
+                            TextField("Name*", text: $email)
+                                .padding()
+                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                                .overlay(RoundedRectangle(cornerRadius: 5)
+                                .stroke(Color.primary1, lineWidth:1))
                         }
-                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
-                        .background(Colors.white)
-                        .clipShape(
-                            RoundedRectangle(
-                                cornerRadius: 5,
-                                style: .continuous
-                            )
-                        )
-                        HStack {
-                            Image(systemName: "phone")
-                                .foregroundColor(.gray)
-                            TextField("Phone Number", text: $phoneNumber).keyboardType(.phonePad)
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text("First Name*")
+                                .font(.karlaLabel)
+                                .foregroundStyle(Color.primary1)
+                            TextField("Phone Number*", text: $phoneNumber)
+                                .padding()
+                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                                .overlay(RoundedRectangle(cornerRadius: 5)
+                                .stroke(Color.primary1, lineWidth:1))
                         }
-                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
-                        .background(Colors.white)
-                        .clipShape(
-                            RoundedRectangle(
-                                cornerRadius: 5,
-                                style: .continuous
-                            )
-                        )
 
                     }.padding(EdgeInsets(top: 30, leading: 0, bottom: 30, trailing: 0))
                     

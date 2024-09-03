@@ -31,7 +31,10 @@ extension Font {
     static var karlaHighlight : Font {
         Font.custom("Karla-Medium", size: 18)
     }
-
+    
+    static var karlaLabel : Font {
+        Font.custom("Karla-Medium", size: 16)
+    }
     
 }
     
