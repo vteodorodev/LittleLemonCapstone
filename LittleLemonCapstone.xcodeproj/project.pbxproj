@@ -39,6 +39,7 @@
 		BC33E1C52C872B8200656721 /* Karla-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC33E1B72C872B8200656721 /* Karla-ExtraLightItalic.ttf */; };
 		BC33E1C62C872B8200656721 /* Karla-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC33E1B82C872B8200656721 /* Karla-Light.ttf */; };
 		BC33E1C92C875F5800656721 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33E1C82C875F5800656721 /* Hero.swift */; };
+		BC33E1CB2C8782F600656721 /* LittleLemonCapstone.png in Resources */ = {isa = PBXBuildFile; fileRef = BC33E1CA2C8782F600656721 /* LittleLemonCapstone.png */; };
 		BC4F7D222C496E150022EA33 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4F7D212C496E150022EA33 /* Onboarding.swift */; };
 		BC4F7D242C4977F60022EA33 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4F7D232C4977F60022EA33 /* Home.swift */; };
 		BC4F7D262C4978350022EA33 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4F7D252C4978350022EA33 /* Menu.swift */; };
@@ -82,6 +83,7 @@
 		BC33E1B72C872B8200656721 /* Karla-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		BC33E1B82C872B8200656721 /* Karla-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Light.ttf"; sourceTree = "<group>"; };
 		BC33E1C82C875F5800656721 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		BC33E1CA2C8782F600656721 /* LittleLemonCapstone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LittleLemonCapstone.png; sourceTree = "<group>"; };
 		BC4F7D212C496E150022EA33 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		BC4F7D232C4977F60022EA33 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		BC4F7D252C4978350022EA33 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				BC4F7D252C4978350022EA33 /* Menu.swift */,
 				BC33E16E2C85CFC300656721 /* FetchedObjects.swift */,
 				BC33E1852C85EE8100656721 /* ExampleDatabase.xcdatamodeld */,
+				BC33E1CA2C8782F600656721 /* LittleLemonCapstone.png */,
 			);
 			path = LittleLemonCapstone;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC33E1CB2C8782F600656721 /* LittleLemonCapstone.png in Resources */,
 				BC33E1C52C872B8200656721 /* Karla-ExtraLightItalic.ttf in Resources */,
 				BC33E1A92C872B7400656721 /* MarkaziText-SemiBold.ttf in Resources */,
 				BC33E1622C84E49400656721 /* Colors.xcassets in Resources */,
