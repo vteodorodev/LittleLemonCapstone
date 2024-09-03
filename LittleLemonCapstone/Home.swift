@@ -12,7 +12,6 @@ struct Home: View {
     let persistenceController = PersistenceController.shared
     
     @State var selectedTabID: Int = 0
-    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         TabView(selection: $selectedTabID){
@@ -47,9 +46,6 @@ struct Home: View {
         .toolbarBackground(.visible, for: .navigationBar)
         .onChange(of: selectedTabID) { val in
             selectedTabID = val
-        }
-        .onAppear() {
-            print("here")
         }
     }
 }

@@ -16,8 +16,12 @@ extension Font {
         Font.custom("MarkaziText-Regular", size: 35)
     }
     
+    static var karlaSection : Font {
+        Font.custom("Karla-Bold", size: 25)
+    }
+    
     static var karlaLeadText: Font {
-        Font.custom("Karla-Medium", size: 20)
+        Font.custom("Karla-Medium", size: 18)
     }
     
     static var karlaCardTitle: Font {
@@ -35,6 +39,11 @@ extension Font {
     static var karlaLabel : Font {
         Font.custom("Karla-Medium", size: 16)
     }
+    
+    static var karlaCategory : Font {
+        Font.custom("Karla-Bold", size: 15)
+    }
+    
     
 }
     

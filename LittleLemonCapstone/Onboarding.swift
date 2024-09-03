@@ -13,9 +13,9 @@ let kEmail = "email key"
 let kIsLoggedIn = "kIsLoggedIn"
 
 struct Onboarding: View {
-    @State var firstName: String = "Maria"
-    @State var phoneNumber: String = "333-333-333"
-    @State var email: String = "mariacallas@gmail.com"
+    @State var firstName: String = ""
+    @State var phoneNumber: String = ""
+    @State var email: String = ""
     
     @State var isLoggedIn: Bool = false
     
@@ -98,7 +98,7 @@ struct Onboarding: View {
                                 .stroke(Color.primary1, lineWidth:1))
                         }
                         VStack(alignment: .leading, spacing: 5) {
-                            Text("First Name*")
+                            Text("Phone Number*")
                                 .font(.karlaLabel)
                                 .foregroundStyle(Color.primary1)
                             TextField("Phone Number*", text: $phoneNumber)

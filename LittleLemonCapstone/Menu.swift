@@ -12,6 +12,7 @@ struct Menu: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     @State var searchText = ""
+    @State var selectedCategory = "all"
     
     func buildSortDescriptors() -> [NSSortDescriptor]  {
         
@@ -24,11 +25,19 @@ struct Menu: View {
     }
     
     func buildPredicate() -> NSPredicate {
+        var searchPredicate : NSPredicate
+        var categoryPredicate = NSPredicate(value: true)
         if searchText.isEmpty {
-            return NSPredicate(value: true)
+            searchPredicate = NSPredicate(value: true)
         } else {
-            return NSPredicate(format: "title CONTAINS[cd] %@", searchText)
+            searchPredicate = NSPredicate(format: "title CONTAINS[cd] %@", searchText)
         }
+        
+        if (selectedCategory) != "all" {
+            categoryPredicate = NSPredicate(format: "category LIKE[cd] %@", selectedCategory)
+        }
+                
+        return NSCompoundPredicate(type: .and, subpredicates: [categoryPredicate, searchPredicate])
     }
     
     func getMenuData () {
@@ -53,6 +62,7 @@ struct Menu: View {
                         dish.price = item.price
                         dish.image = item.image
                         dish.dishDescription = item.dishDescription
+                        dish.category = item.category
                     }
                     
                     try viewContext.save()
@@ -84,6 +94,7 @@ struct Menu: View {
                         .foregroundStyle(Colors.white)
                     HStack {
                         Text("We are a family owned mediterranean restaurant, focused on traditional recipes served with a modern twist.").font(.karlaLeadText).foregroundStyle(Colors.white)
+                            .frame(height: 140)
                         Image("hero-image")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
@@ -111,6 +122,32 @@ struct Menu: View {
             .padding()
             .background(Colors.primaryOne)
             
+            VStack(alignment: .leading) {
+                Text("ORDER FOR DELIVERY!").font(.karlaSection)
+                ScrollView(.horizontal){
+                    HStack{
+                        ForEach(["all","starters", "mains", "desserts", "drinks"], id: \.self) {category in
+                            Text(category.capitalized)
+                                .font(.karlaCategory)
+                                .padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15))
+                                .background(Colors.white)
+                                .clipShape(
+                                    RoundedRectangle(
+                                        cornerRadius: 15,
+                                        style: .continuous
+                                    )
+                                )
+                                .onTapGesture {
+                                    selectedCategory = category
+                                }
+
+                        }
+                    }
+                }
+            }.padding()
+            
+            Divider()
+                        
             FetchedObjects(
                 predicate: buildPredicate(),
                 sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in

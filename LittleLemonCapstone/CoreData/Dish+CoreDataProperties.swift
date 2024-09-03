@@ -21,6 +21,8 @@ extension Dish {
     @NSManaged public var image: String
     @NSManaged public var id: Int64
     @NSManaged public var dishDescription: String
+    @NSManaged public var category: String
+
 
 
 }
