@@ -73,28 +73,43 @@ struct Menu: View {
     var body: some View {
         
         VStack(alignment:.leading) {
-            VStack(alignment: .leading, spacing: 0) {
+            VStack(alignment: .leading) {
                 Text("Little Lemon Menu")
                     .font(.markaziTitle)
                     .foregroundStyle(Colors.primaryTwo)
                     .lineSpacing(0)
-                    VStack(alignment: .leading) {
-                        Text("Chicago")
-                            .font(.markaziSubtitle)
-                            .foregroundStyle(Colors.white)
-                        HStack {
-                            Text("We are a family owned mediterranean restaurant, focused on traditional recipes served with a modern twist.").font(.karlaLeadText).foregroundStyle(Colors.white)
-                            Image("hero-image")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 140, height: 140)
-                                .clipped()
-                                .cornerRadius(16)
-                        }
+                VStack(alignment: .leading) {
+                    Text("Chicago")
+                        .font(.markaziSubtitle)
+                        .foregroundStyle(Colors.white)
+                    HStack {
+                        Text("We are a family owned mediterranean restaurant, focused on traditional recipes served with a modern twist.").font(.karlaLeadText).foregroundStyle(Colors.white)
+                        Image("hero-image")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 140, height: 140)
+                            .clipped()
+                            .cornerRadius(16)
                     }
-                    
-                TextField("Search menu", text: $searchText)
-            }.padding().background(Colors.primaryOne)
+                }
+                
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(.gray)
+                    TextField("Search menu", text: $searchText)
+                }
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
+                .background(Colors.white)
+                .clipShape(
+                    RoundedRectangle(
+                        cornerRadius: 20,
+                        style: .continuous
+                    )
+                )
+            }
+            .padding()
+            .background(Colors.primaryOne)
             
             FetchedObjects(
                 predicate: buildPredicate(),
