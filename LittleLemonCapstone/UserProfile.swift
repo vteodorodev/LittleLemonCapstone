@@ -12,7 +12,7 @@ struct UserProfile: View {
     @Environment(\.presentationMode) var presentation
     
     let firstName = UserDefaults.standard.string(forKey: kFirstName)
-    let lastName = UserDefaults.standard.string(forKey: kLastName)
+    let phoneNumber = UserDefaults.standard.string(forKey: kPhoneNumber)
     let email = UserDefaults.standard.string(forKey: kEmail)
     
     func onPressLogout() {
@@ -31,7 +31,7 @@ struct UserProfile: View {
                 .padding(EdgeInsets(top: 50, leading: 0, bottom: 20, trailing: 0))
             
             VStack(spacing: 10){
-                Text("\(firstName ?? "") \(lastName ?? "")")
+                Text("\(firstName ?? "") \(phoneNumber ?? "")")
                 Text(email ?? "")
             }.fontWeight(.semibold)
             

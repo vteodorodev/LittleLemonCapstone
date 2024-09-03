@@ -38,6 +38,7 @@
 		BC33E1C42C872B8200656721 /* Karla-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC33E1B62C872B8100656721 /* Karla-ExtraBold.ttf */; };
 		BC33E1C52C872B8200656721 /* Karla-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC33E1B72C872B8200656721 /* Karla-ExtraLightItalic.ttf */; };
 		BC33E1C62C872B8200656721 /* Karla-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC33E1B82C872B8200656721 /* Karla-Light.ttf */; };
+		BC33E1C92C875F5800656721 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33E1C82C875F5800656721 /* Hero.swift */; };
 		BC4F7D222C496E150022EA33 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4F7D212C496E150022EA33 /* Onboarding.swift */; };
 		BC4F7D242C4977F60022EA33 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4F7D232C4977F60022EA33 /* Home.swift */; };
 		BC4F7D262C4978350022EA33 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4F7D252C4978350022EA33 /* Menu.swift */; };
@@ -80,6 +81,7 @@
 		BC33E1B62C872B8100656721 /* Karla-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-ExtraBold.ttf"; sourceTree = "<group>"; };
 		BC33E1B72C872B8200656721 /* Karla-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		BC33E1B82C872B8200656721 /* Karla-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Light.ttf"; sourceTree = "<group>"; };
+		BC33E1C82C875F5800656721 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		BC4F7D212C496E150022EA33 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		BC4F7D232C4977F60022EA33 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		BC4F7D252C4978350022EA33 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				BC33E16C2C84FB5300656721 /* SmallLogo.swift */,
 				BC33E18D2C86023E00656721 /* MenuItemView.swift */,
+				BC33E1C82C875F5800656721 /* Hero.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				BC33E16D2C84FB5300656721 /* SmallLogo.swift in Sources */,
 				BC4F7D242C4977F60022EA33 /* Home.swift in Sources */,
 				BC4F7D222C496E150022EA33 /* Onboarding.swift in Sources */,
+				BC33E1C92C875F5800656721 /* Hero.swift in Sources */,
 				BC33E16F2C85CFC300656721 /* FetchedObjects.swift in Sources */,
 				BC33E1722C85D06F00656721 /* MenuListStruct.swift in Sources */,
 				BC33E18E2C86023E00656721 /* MenuItemView.swift in Sources */,
