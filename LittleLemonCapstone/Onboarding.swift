@@ -48,45 +48,64 @@ struct Onboarding: View {
                     Text("")
                 }
                 
+                Spacer()
                 
                 Image("full-logo").resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(height: 300, alignment: .center)
+                
                                 
                 VStack{
                     VStack{
-                        TextField("First Name", text: $firstName)
-                            .frame(minHeight: 50)
-                            .padding(EdgeInsets(top: 0, leading: 6, bottom: 0, trailing: 6))
-                            .background(Colors.white)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 5)
-                                    .stroke(lineWidth: 1.0)
-                                    .fill(Colors.primaryOne)
+                        HStack {
+                            Image(systemName: "person")
+                                .foregroundColor(.gray)
+                            TextField("First name", text: $firstName)
+                        }
+                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
+                        .background(Colors.white)
+                        .clipShape(
+                            RoundedRectangle(
+                                cornerRadius: 5,
+                                style: .continuous
                             )
-                        TextField("Last Name", text: $lastName)
-                            .frame(minHeight: 50)
-                            .padding(EdgeInsets(top: 0, leading: 6, bottom: 0, trailing: 6))
-                            .background(Colors.white)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 5)
-                                    .stroke(lineWidth: 1.0)
-                                    .fill(Colors.primaryOne)
+                        )
+                        HStack {
+                            Image(systemName: "person")
+                                .foregroundColor(.gray)
+                            TextField("Last name", text: $lastName)
+                        }
+                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
+                        .background(Colors.white)
+                        .clipShape(
+                            RoundedRectangle(
+                                cornerRadius: 5,
+                                style: .continuous
                             )
-                        TextField("E-Mail", text: $email)
-                            .frame(minHeight: 50)
-                            .padding(EdgeInsets(top: 0, leading: 6, bottom: 0, trailing: 6))
-                            .background(Colors.white)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 5)
-                                    .stroke(lineWidth: 1.0)
-                                    .fill(Colors.primaryOne)
+                        )
+
+                        HStack {
+                            Image(systemName: "at")
+                                .foregroundColor(.gray)
+                            TextField("Email", text: $email)
+                        }
+                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
+                        .background(Colors.white)
+                        .clipShape(
+                            RoundedRectangle(
+                                cornerRadius: 5,
+                                style: .continuous
                             )
-                    }.padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
+                        )
+
+                    }.padding(EdgeInsets(top: 30, leading: 0, bottom: 30, trailing: 0))
                     
                     Button(action: onPressRegister) {
                         Text("Register")
-                    }.buttonStyle(YellowButton())
+                    }.buttonStyle(YellowButton()).padding(EdgeInsets(top: 0, leading: 0, bottom: 40, trailing: 0))
                 }.padding()
             }.onAppear {
                 onAppearOnboarding()

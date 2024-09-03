@@ -29,7 +29,7 @@ extension Font {
     }
     
     static var karlaHighlight : Font {
-        Font.custom("Karla-Medium", size: 16)
+        Font.custom("Karla-Medium", size: 18)
     }
 
     
