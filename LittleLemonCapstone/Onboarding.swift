@@ -8,21 +8,21 @@
 import SwiftUI
 
 let kFirstName = "first name key"
-let kPhoneNumber = "phone number key"
+let kLastName = "last name key"
 let kEmail = "email key"
 let kIsLoggedIn = "kIsLoggedIn"
 
 struct Onboarding: View {
     @State var firstName: String = ""
-    @State var phoneNumber: String = ""
+    @State var lastName: String = ""
     @State var email: String = ""
     
     @State var isLoggedIn: Bool = false
     
     func onPressRegister() {
-        if !firstName.isEmpty && !phoneNumber.isEmpty && !email.isEmpty {
+        if !firstName.isEmpty && !lastName.isEmpty && !email.isEmpty {
             UserDefaults.standard.set(firstName, forKey: kFirstName);
-            UserDefaults.standard.set(phoneNumber, forKey: kPhoneNumber)
+            UserDefaults.standard.set(lastName, forKey: kLastName)
             UserDefaults.standard.set(email, forKey: kEmail)
             isLoggedIn = true
             UserDefaults.standard.set(isLoggedIn, forKey: kIsLoggedIn)
@@ -81,7 +81,18 @@ struct Onboarding: View {
                             Text("First Name*")
                                 .font(.karlaLabel)
                                 .foregroundStyle(Color.primary1)
-                            TextField("Name*", text: $firstName)
+                            TextField("First Name", text: $firstName)
+                                .padding()
+                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                                .overlay(RoundedRectangle(cornerRadius: 5)
+                                .stroke(Color.primary1, lineWidth:1))
+                        }
+                        
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text("Last Name*")
+                                .font(.karlaLabel)
+                                .foregroundStyle(Color.primary1)
+                            TextField("Last Name", text: $lastName)
                                 .padding()
                                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
                                 .overlay(RoundedRectangle(cornerRadius: 5)
@@ -92,22 +103,13 @@ struct Onboarding: View {
                             Text("Email*")
                                 .font(.karlaLabel)
                                 .foregroundStyle(Color.primary1)
-                            TextField("Name*", text: $email)
+                            TextField("Email", text: $email)
                                 .padding()
                                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
                                 .overlay(RoundedRectangle(cornerRadius: 5)
                                 .stroke(Color.primary1, lineWidth:1))
                         }
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text("Phone Number*")
-                                .font(.karlaLabel)
-                                .foregroundStyle(Color.primary1)
-                            TextField("Phone Number*", text: $phoneNumber)
-                                .padding()
-                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-                                .overlay(RoundedRectangle(cornerRadius: 5)
-                                .stroke(Color.primary1, lineWidth:1))
-                        }
+                        
 
                     }.padding(EdgeInsets(top: 30, leading: 0, bottom: 30, trailing: 0))
                     

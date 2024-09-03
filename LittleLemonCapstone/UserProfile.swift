@@ -12,7 +12,7 @@ struct UserProfile: View {
     @Environment(\.presentationMode) var presentation
     
     let firstName = UserDefaults.standard.string(forKey: kFirstName)
-    let phoneNumber = UserDefaults.standard.string(forKey: kPhoneNumber)
+    let lastName = UserDefaults.standard.string(forKey: kLastName)
     let email = UserDefaults.standard.string(forKey: kEmail)
     
     func onPressLogout() {
@@ -37,7 +37,9 @@ struct UserProfile: View {
                 }
                 
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("First Name").font(.karlaLabel).foregroundStyle(Color.primary1)
+                    Text("First Name")
+                        .font(.karlaLabel)
+                        .foregroundStyle(Color.primary1)
                     Text("\(firstName ?? "")")
                         .padding()
                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
@@ -45,16 +47,20 @@ struct UserProfile: View {
                 }
                 
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("Email").font(.karlaLabel).foregroundStyle(Color.primary1)
-                    Text("\(email ?? "")")
+                    Text("Last Name")
+                        .font(.karlaLabel)
+                        .foregroundStyle(Color.primary1)
+                    Text("\(lastName ?? "")")
                         .padding()
                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
                         .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.primary1, lineWidth:1))
                 }
                 
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("Phone Number").font(.karlaLabel).foregroundStyle(Color.primary1)
-                    Text("\(phoneNumber ?? "")")
+                    Text("Email")
+                        .font(.karlaLabel)
+                        .foregroundStyle(Color.primary1)
+                    Text("\(email ?? "")")
                         .padding()
                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
                         .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.primary1, lineWidth:1))
