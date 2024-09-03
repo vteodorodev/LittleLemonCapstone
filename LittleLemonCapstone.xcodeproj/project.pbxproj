@@ -40,6 +40,7 @@
 		BC33E1C62C872B8200656721 /* Karla-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC33E1B82C872B8200656721 /* Karla-Light.ttf */; };
 		BC33E1C92C875F5800656721 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33E1C82C875F5800656721 /* Hero.swift */; };
 		BC33E1CB2C8782F600656721 /* LittleLemonCapstone.png in Resources */ = {isa = PBXBuildFile; fileRef = BC33E1CA2C8782F600656721 /* LittleLemonCapstone.png */; };
+		BC33E1CD2C8783A500656721 /* LittleLemonCapstone.png in Resources */ = {isa = PBXBuildFile; fileRef = BC33E1CC2C8783A500656721 /* LittleLemonCapstone.png */; };
 		BC4F7D222C496E150022EA33 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4F7D212C496E150022EA33 /* Onboarding.swift */; };
 		BC4F7D242C4977F60022EA33 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4F7D232C4977F60022EA33 /* Home.swift */; };
 		BC4F7D262C4978350022EA33 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4F7D252C4978350022EA33 /* Menu.swift */; };
@@ -84,6 +85,7 @@
 		BC33E1B82C872B8200656721 /* Karla-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Light.ttf"; sourceTree = "<group>"; };
 		BC33E1C82C875F5800656721 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		BC33E1CA2C8782F600656721 /* LittleLemonCapstone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LittleLemonCapstone.png; sourceTree = "<group>"; };
+		BC33E1CC2C8783A500656721 /* LittleLemonCapstone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LittleLemonCapstone.png; sourceTree = "<group>"; };
 		BC4F7D212C496E150022EA33 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		BC4F7D232C4977F60022EA33 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		BC4F7D252C4978350022EA33 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		BC761C712C495925003FA54D = {
 			isa = PBXGroup;
 			children = (
+				BC33E1CC2C8783A500656721 /* LittleLemonCapstone.png */,
 				BC761C7C2C495925003FA54D /* LittleLemonCapstone */,
 				BC761C7B2C495925003FA54D /* Products */,
 			);
@@ -289,6 +292,7 @@
 				BC33E1622C84E49400656721 /* Colors.xcassets in Resources */,
 				BC33E1B92C872B8200656721 /* Karla-Italic.ttf in Resources */,
 				BC33E1BD2C872B8200656721 /* Karla-LightItalic.ttf in Resources */,
+				BC33E1CD2C8783A500656721 /* LittleLemonCapstone.png in Resources */,
 				BC33E1C12C872B8200656721 /* Karla-ExtraLight.ttf in Resources */,
 				BC33E1BE2C872B8200656721 /* Karla-MediumItalic.ttf in Resources */,
 				BC33E1C62C872B8200656721 /* Karla-Light.ttf in Resources */,
