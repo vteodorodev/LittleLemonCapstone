@@ -72,21 +72,40 @@ struct Menu: View {
     
     var body: some View {
         
-        VStack {
-            Text("Little Lemon Menu")
-            Text("Chicago")
-            Text("Order your favorite items and get them at your doorstep")
-            TextField("Search menu", text: $searchText)
+        VStack(alignment:.leading) {
+            VStack(alignment: .leading, spacing: 0) {
+                Text("Little Lemon Menu")
+                    .font(.markaziTitle)
+                    .foregroundStyle(Colors.primaryTwo)
+                    .lineSpacing(0)
+                    VStack(alignment: .leading) {
+                        Text("Chicago")
+                            .font(.markaziSubtitle)
+                            .foregroundStyle(Colors.white)
+                        HStack {
+                            Text("We are a family owned mediterranean restaurant, focused on traditional recipes served with a modern twist.").font(.karlaLeadText).foregroundStyle(Colors.white)
+                            Image("hero-image")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 140, height: 140)
+                                .clipped()
+                                .cornerRadius(16)
+                        }
+                    }
+                    
+                TextField("Search menu", text: $searchText)
+            }.padding().background(Colors.primaryOne)
+            
             FetchedObjects(
                 predicate: buildPredicate(),
                 sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
-                List {
-                    ForEach(dishes) {
-                        dish in
-                        MenuItemView(title: dish.title, formattedPrice: dish.formatPrice(), image: dish.image)
+                    List {
+                        ForEach(dishes) {
+                            dish in
+                            MenuItemView(title: dish.title, formattedPrice: dish.formatPrice(), image: dish.image)
+                        }
                     }
                 }
-            }
         }.onAppear {
             getMenuData()
         }

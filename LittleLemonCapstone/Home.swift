@@ -20,13 +20,13 @@ struct Home: View {
             
         }
         .navigationBarBackButtonHidden(true)
-        .toolbar {
+/*        .toolbar {
             ToolbarItem(placement: .principal) {
                 SmallLogo()
                     .frame(maxWidth: .infinity, minHeight: 40, alignment: .center)
                     .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
             }
-        }
+        }*/
     }
 }
 
